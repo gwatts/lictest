@@ -1,4 +1,4 @@
-package main
+package bar
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"github.com/jmespath/go-jmespath"
 )
 
-func main() {
+func Bar() {
 	var jsondata = []byte(`{"foo": {"bar": {"baz": [0, 1, 2, 3, 4]}}}`) // your data
 	var data interface{}
 	json.Unmarshal(jsondata, &data)
