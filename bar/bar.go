@@ -3,6 +3,8 @@ package bar
 import (
 	"encoding/json"
 	"fmt"
+
+	"github.com/gwatts/rootcerts"
 	"github.com/jmespath/go-jmespath"
 )
 
@@ -12,4 +14,6 @@ func Bar() {
 	json.Unmarshal(jsondata, &data)
 	result, _ := jmespath.Search("foo.bar.baz[2]", data)
 	fmt.Println(result)
+
+	rootcerts.UpdateDefaultTransport()
 }
